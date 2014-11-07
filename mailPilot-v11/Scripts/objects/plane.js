@@ -7,7 +7,7 @@ var objects;
             this.stage = stage;
             this.game = game;
             this.image = new createjs.Sprite(managers.Assets.atlas, "plane");
-            this.image.y = 430;
+            this.image.x = 25;
             this.width = this.image.getBounds().width;
             this.height = this.image.getBounds().height;
             this.image.regX = this.width / 2;
@@ -16,7 +16,7 @@ var objects;
             this.engineSound = createjs.Sound.play('engine', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         }
         Plane.prototype.update = function () {
-            this.image.x = this.stage.mouseX;
+            this.image.y = this.stage.mouseY;
         };
         Plane.prototype.destroy = function () {
             this.engineSound.stop();
