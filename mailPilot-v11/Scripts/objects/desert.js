@@ -11,19 +11,19 @@ var objects;
             this.height = this.image.getBounds().height;
             this.reset();
 
-            this.dx = -5;
+            this.dx = 5;
 
             game.addChild(this.image);
         }
         Desert.prototype.update = function () {
-            this.image.x += this.dx;
-            if (this.image.x <= 0) {
+            this.image.x -= this.dx;
+            if (this.image.x <= -stage.canvas.width) {
                 this.reset();
             }
         };
 
         Desert.prototype.reset = function () {
-            this.image.x = -960;
+            this.image.x = 0;
         };
 
         Desert.prototype.destroy = function () {
