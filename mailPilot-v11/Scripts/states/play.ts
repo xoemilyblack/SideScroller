@@ -3,14 +3,14 @@
 /// <reference path="../objects/island.ts" />
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/desert.ts" />
-/// <reference path="../objects/plane.ts" />
+/// <reference path="../objects/tank.ts" />
 /// <reference path="../objects/scoreboard.ts" />
 /// <reference path="../managers/collision.ts" />
 module states {
     export function playState() {
         desert.update();
         island.update();
-        plane.update();
+        tank.update();
 
         for (var count = 0; count < constants.CLOUD_NUM; count++) {
             clouds[count].update();
@@ -21,7 +21,7 @@ module states {
 
         if (scoreboard.lives <= 0) {
             stage.removeChild(game);
-            plane.destroy();
+            tank.destroy();
             game.removeAllChildren();
             game.removeAllEventListeners();
             currentState = constants.GAME_OVER_STATE;
@@ -37,7 +37,7 @@ module states {
         // Instantiate Game Objects
         desert = new objects.Desert(stage, game);
         island = new objects.Island(stage, game);
-        plane = new objects.Plane(stage, game);
+        tank = new objects.Tank(stage, game);
 
         // Show Cursor
         stage.cursor = "none";
@@ -51,7 +51,7 @@ module states {
         scoreboard = new objects.Scoreboard(stage, game);
 
         // Instantiate Collision Manager
-        collision = new managers.Collision(plane, island, clouds, scoreboard);
+        collision = new managers.Collision(tank, island, clouds, scoreboard);
 
         stage.addChild(game);
     }

@@ -3,7 +3,7 @@
 /// <reference path="objects/cloud.ts" />
 /// <reference path="objects/island.ts" />
 /// <reference path="objects/desert.ts" />
-/// <reference path="objects/plane.ts" />
+/// <reference path="objects/tank.ts" />
 /// <reference path="objects/scoreboard.ts" />
 /// <reference path="objects/label.ts" />
 /// <reference path="objects/button.ts" />
@@ -17,7 +17,7 @@ var stage;
 var game;
 
 var desert;
-var plane;
+var tank;
 var island;
 var clouds = [];
 var scoreboard;

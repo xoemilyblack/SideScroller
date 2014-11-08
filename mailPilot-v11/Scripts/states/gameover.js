@@ -4,7 +4,7 @@
 /// <reference path="../objects/island.ts" />
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/desert.ts" />
-/// <reference path="../objects/plane.ts" />
+/// <reference path="../objects/tank.ts" />
 /// <reference path="../objects/scoreboard.ts" />
 var states;
 (function (states) {

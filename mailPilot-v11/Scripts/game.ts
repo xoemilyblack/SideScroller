@@ -3,7 +3,7 @@
 /// <reference path="objects/cloud.ts" />
 /// <reference path="objects/island.ts" />
 /// <reference path="objects/desert.ts" />
-/// <reference path="objects/plane.ts" />
+/// <reference path="objects/tank.ts" />
 /// <reference path="objects/scoreboard.ts" />
 /// <reference path="objects/label.ts" />
 /// <reference path="objects/button.ts" />
@@ -19,7 +19,7 @@ var stage: createjs.Stage;
 var game: createjs.Container;
 
 var desert: objects.Desert;
-var plane: objects.Plane;
+var tank: objects.Tank;
 var island: objects.Island;
 var clouds = []; // Clouds array;
 var scoreboard: objects.Scoreboard;

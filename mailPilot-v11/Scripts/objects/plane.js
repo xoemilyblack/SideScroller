@@ -2,12 +2,12 @@
 var objects;
 (function (objects) {
     // Plane Class
-    var Plane = (function () {
-        function Plane(stage, game) {
+    var Tank = (function () {
+        function Tank(stage, game) {
             this.stage = stage;
             this.game = game;
-            this.image = new createjs.Sprite(managers.Assets.atlas, "plane");
-            this.image.x = 25;
+            this.image = new createjs.Bitmap(managers.Assets.loader.getResult("tank"));
+            this.image.x = 40;
             this.width = this.image.getBounds().width;
             this.height = this.image.getBounds().height;
             this.image.regX = this.width / 2;
@@ -15,15 +15,15 @@ var objects;
             game.addChild(this.image);
             this.engineSound = createjs.Sound.play('engine', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         }
-        Plane.prototype.update = function () {
+        Tank.prototype.update = function () {
             this.image.y = this.stage.mouseY;
         };
-        Plane.prototype.destroy = function () {
+        Tank.prototype.destroy = function () {
             this.engineSound.stop();
             game.removeChild(this.image);
         };
-        return Plane;
+        return Tank;
     })();
-    objects.Plane = Plane;
+    objects.Tank = Tank;
 })(objects || (objects = {}));
 //# sourceMappingURL=plane.js.map
