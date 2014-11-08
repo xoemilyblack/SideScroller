@@ -1,5 +1,5 @@
 ﻿/// <reference path="../objects/button.ts" />
-/// <reference path="../objects/cloud.ts" />
+/// <reference path="../objects/enemy.ts" />
 /// <reference path="../objects/island.ts" />
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/desert.ts" />
@@ -13,8 +13,8 @@ var states;
         island.update();
         tank.update();
 
-        for (var count = 0; count < constants.CLOUD_NUM; count++) {
-            clouds[count].update();
+        for (var count = 0; count < constants.ENEMY_NUM; count++) {
+            enemies[count].update();
         }
 
         collision.update();
@@ -44,15 +44,15 @@ var states;
         // Show Cursor
         stage.cursor = "none";
 
-        for (var count = 0; count < constants.CLOUD_NUM; count++) {
-            clouds[count] = new objects.Cloud(stage, game);
+        for (var count = 0; count < constants.ENEMY_NUM; count++) {
+            enemies[count] = new objects.Enemy(stage, game);
         }
 
         // Display Scoreboard
         scoreboard = new objects.Scoreboard(stage, game);
 
         // Instantiate Collision Manager
-        collision = new managers.Collision(tank, island, clouds, scoreboard);
+        collision = new managers.Collision(tank, island, enemies, scoreboard);
 
         stage.addChild(game);
     }

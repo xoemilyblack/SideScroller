@@ -5,6 +5,7 @@
         { id: "loading", src: "assets/images/loading.jpg" },
         { id: "desert", src: "assets/images/desert.fw.png" },
         { id: "tank", src: "assets/images/tank.fw.png" },
+        { id: "enemy", src: "assets/images/enemy.fw.png" },
         { id: "engine", src: "assets/sounds/engine.ogg" },
         { id: "thunder", src: "assets/sounds/thunder.ogg" },
         { id: "yay", src: "assets/sounds/yay.ogg" }

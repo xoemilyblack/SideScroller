@@ -1,4 +1,4 @@
-﻿/// <reference path="../objects/cloud.ts" />
+﻿/// <reference path="../objects/enemy.ts" />
 /// <reference path="../objects/island.ts" />
 /// <reference path="../objects/tank.ts" />
 /// <reference path="../objects/scoreboard.ts" />
@@ -6,11 +6,11 @@ var managers;
 (function (managers) {
     // Collision Manager Class
     var Collision = (function () {
-        function Collision(tank, island, clouds, scoreboard) {
-            this.clouds = [];
+        function Collision(tank, island, enemies, scoreboard) {
+            this.enemies = [];
             this.tank = tank;
             this.island = island;
-            this.clouds = clouds;
+            this.enemies = enemies;
             this.scoreboard = scoreboard;
         }
         // Utility method - Distance calculation between two points
@@ -31,22 +31,22 @@ var managers;
         };
 
         // check collision between plane and any cloud object
-        Collision.prototype.tankAndEnemy = function (cloud) {
+        Collision.prototype.tankAndEnemy = function (enemy) {
             var p1 = new createjs.Point();
             var p2 = new createjs.Point();
             p1.x = this.tank.image.x;
             p1.y = this.tank.image.y;
-            p2.x = cloud.image.x;
-            p2.y = cloud.image.y;
-            if (this.distance(p1, p2) < ((this.tank.height / 2) + (cloud.height / 2))) {
+            p2.x = enemy.image.x;
+            p2.y = enemy.image.y;
+            if (this.distance(p1, p2) < ((this.tank.height / 2) + (enemy.height / 2))) {
                 createjs.Sound.play("thunder");
                 this.scoreboard.lives -= 1;
-                cloud.reset();
+                enemy.reset();
             }
         };
 
         // check collision between plane and island
-        Collision.prototype.planeAndIsland = function () {
+        Collision.prototype.tankAndAmmo = function () {
             var p1 = new createjs.Point();
             var p2 = new createjs.Point();
             p1.x = this.tank.image.x;
@@ -62,10 +62,10 @@ var managers;
 
         // Utility Function to Check Collisions
         Collision.prototype.update = function () {
-            for (var count = 0; count < constants.CLOUD_NUM; count++) {
-                this.tankAndEnemy(this.clouds[count]);
+            for (var count = 0; count < constants.ENEMY_NUM; count++) {
+                this.tankAndEnemy(this.enemies[count]);
             }
-            this.planeAndIsland();
+            this.tankAndAmmo();
         };
         return Collision;
     })();

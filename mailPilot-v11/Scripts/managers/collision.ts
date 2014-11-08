@@ -1,4 +1,4 @@
-﻿/// <reference path="../objects/cloud.ts" />
+﻿/// <reference path="../objects/enemy.ts" />
 /// <reference path="../objects/island.ts" />
 /// <reference path="../objects/tank.ts" />
 /// <reference path="../objects/scoreboard.ts" />
@@ -9,13 +9,13 @@ module managers {
         // class variables
         private tank: objects.Tank;
         private island: objects.Island;
-        private clouds = [];
+        private enemies = [];
         private scoreboard: objects.Scoreboard;
 
-        constructor(tank: objects.Tank, island: objects.Island, clouds, scoreboard: objects.Scoreboard) {
+        constructor(tank: objects.Tank, island: objects.Island, enemies, scoreboard: objects.Scoreboard) {
             this.tank = tank;
             this.island = island;
-            this.clouds = clouds;
+            this.enemies = enemies;
             this.scoreboard = scoreboard;
         }
 
@@ -37,22 +37,22 @@ module managers {
         }
 
         // check collision between plane and any cloud object
-        private tankAndEnemy(cloud: objects.Cloud) {
+        private tankAndEnemy(enemy: objects.Enemy) {
             var p1: createjs.Point = new createjs.Point();
             var p2: createjs.Point = new createjs.Point();
             p1.x = this.tank.image.x;
             p1.y = this.tank.image.y;
-            p2.x = cloud.image.x;
-            p2.y = cloud.image.y;
-            if (this.distance(p1, p2) < ((this.tank.height / 2) + (cloud.height / 2))) {
+            p2.x = enemy.image.x;
+            p2.y = enemy.image.y;
+            if (this.distance(p1, p2) < ((this.tank.height / 2) + (enemy.height / 2))) {
                 createjs.Sound.play("thunder");
                 this.scoreboard.lives -= 1;
-                cloud.reset();
+                enemy.reset();
             }
         }
 
         // check collision between plane and island
-        private planeAndIsland() {
+        private tankAndAmmo() {
             var p1: createjs.Point = new createjs.Point();
             var p2: createjs.Point = new createjs.Point();
             p1.x = this.tank.image.x;
@@ -68,10 +68,10 @@ module managers {
 
         // Utility Function to Check Collisions
         update() {
-            for (var count = 0; count < constants.CLOUD_NUM; count++) {
-                this.tankAndEnemy(this.clouds[count]);
+            for (var count = 0; count < constants.ENEMY_NUM; count++) {
+                this.tankAndEnemy(this.enemies[count]);
             }
-            this.planeAndIsland();
+            this.tankAndAmmo();
         }
     }
 } 

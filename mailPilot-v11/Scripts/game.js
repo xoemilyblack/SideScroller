@@ -1,6 +1,6 @@
 ﻿/// <reference path="constants.ts" />
 /// <reference path="managers/asset.ts" />
-/// <reference path="objects/cloud.ts" />
+/// <reference path="objects/enemy.ts" />
 /// <reference path="objects/island.ts" />
 /// <reference path="objects/desert.ts" />
 /// <reference path="objects/tank.ts" />
@@ -19,7 +19,7 @@ var game;
 var desert;
 var tank;
 var island;
-var clouds = [];
+var enemies = [];
 var scoreboard;
 
 var collision;
