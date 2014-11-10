@@ -7,7 +7,9 @@ module objects {
         game: createjs.Container;
         width: number;
         height: number;
-        dx: number;
+        forward: number;
+ 
+
         constructor(stage: createjs.Stage, game: createjs.Container) {
             this.stage = stage;
             this.game = game;
@@ -16,7 +18,7 @@ module objects {
             this.height = this.image.getBounds().height;
             this.image.regX = this.width / 2;
             this.image.regY = this.height / 2;
-            this.dx = 10;
+            this.forward = Math.floor((Math.random() * 10) + 5);
             this.reset();
 
             game.addChild(this.image);
@@ -24,7 +26,7 @@ module objects {
 
         update() {
          
-            this.image.x -= this.dx;
+            this.image.x -= this.forward;
             if (this.image.x <= -stage.canvas.width) {
                 this.reset();
             }

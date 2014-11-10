@@ -5,8 +5,8 @@
     export var GAME_OVER_STATE: number = 2;
 
     // Game Constants
-    export var ENEMY_NUM: number = 3;
-    export var LABEL_FONT = "40px Consolas";
-    export var LABEL_COLOUR = "#FFFF00";
+    export var ENEMY_NUM: number = 4;
+    export var LABEL_FONT = "40px Bold Consolas";
+    export var LABEL_COLOUR = "#FFFFFF";
     export var PLANE_LIVES = 3;
 }

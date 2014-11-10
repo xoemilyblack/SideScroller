@@ -1,6 +1,6 @@
 ﻿/// <reference path="../objects/button.ts" />
 /// <reference path="../objects/enemy.ts" />
-/// <reference path="../objects/island.ts" />
+/// <reference path="../objects/ammo.ts" />
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/desert.ts" />
 /// <reference path="../objects/tank.ts" />
@@ -9,7 +9,7 @@
 module states {
     export function playState() {
         desert.update();
-        island.update();
+        ammo.update();
         tank.update();
 
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
@@ -27,6 +27,10 @@ module states {
             currentState = constants.GAME_OVER_STATE;
             changeState(currentState);
         }
+        if (scoreboard.score == 1500) {
+            scoreboard.lives = scoreboard.lives + 1;
+
+        } 
     }
 
     // play state Function
@@ -36,7 +40,7 @@ module states {
 
         // Instantiate Game Objects
         desert = new objects.Desert(stage, game);
-        island = new objects.Island(stage, game);
+        ammo = new objects.Ammo(stage, game);
         tank = new objects.Tank(stage, game);
 
         // Show Cursor
@@ -51,7 +55,7 @@ module states {
         scoreboard = new objects.Scoreboard(stage, game);
 
         // Instantiate Collision Manager
-        collision = new managers.Collision(tank, island, enemies, scoreboard);
+        collision = new managers.Collision(tank, ammo, enemies, scoreboard);
 
         stage.addChild(game);
     }

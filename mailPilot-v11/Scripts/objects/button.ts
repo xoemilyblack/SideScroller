@@ -2,7 +2,7 @@
 /// <reference path="../managers/asset.ts" />
 module objects {
     export class Button extends createjs.Sprite {
-        constructor(x:number, y:number, buttonIDString: string) {
+        constructor(x: number, y: number, buttonIDString: string) {
             super(managers.Assets.atlas, buttonIDString);
             this.regX = this.getBounds().width / 2;
             this.regY = this.getBounds().height / 2;
@@ -25,4 +25,4 @@ module objects {
             this.alpha = 1;
         }
     }
-} 
+}

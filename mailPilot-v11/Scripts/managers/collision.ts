@@ -1,5 +1,5 @@
 ﻿/// <reference path="../objects/enemy.ts" />
-/// <reference path="../objects/island.ts" />
+/// <reference path="../objects/ammo.ts" />
 /// <reference path="../objects/tank.ts" />
 /// <reference path="../objects/scoreboard.ts" />
 
@@ -8,13 +8,13 @@ module managers {
     export class Collision {
         // class variables
         private tank: objects.Tank;
-        private island: objects.Island;
+        private ammo: objects.Ammo;
         private enemies = [];
         private scoreboard: objects.Scoreboard;
 
-        constructor(tank: objects.Tank, island: objects.Island, enemies, scoreboard: objects.Scoreboard) {
+        constructor(tank: objects.Tank, ammo: objects.Ammo, enemies, scoreboard: objects.Scoreboard) {
             this.tank = tank;
-            this.island = island;
+            this.ammo = ammo;
             this.enemies = enemies;
             this.scoreboard = scoreboard;
         }
@@ -57,12 +57,12 @@ module managers {
             var p2: createjs.Point = new createjs.Point();
             p1.x = this.tank.image.x;
             p1.y = this.tank.image.y;
-            p2.x = this.island.image.x;
-            p2.y = this.island.image.y;
-            if (this.distance(p1, p2) < ((this.tank.height / 2) + (this.island.height / 2))) {
+            p2.x = this.ammo.image.x;
+            p2.y = this.ammo.image.y;
+            if (this.distance(p1, p2) < ((this.tank.height / 2) + (this.ammo.height / 2))) {
                 createjs.Sound.play("yay");
                 this.scoreboard.score += 100;
-                this.island.reset();
+                this.ammo.reset();
             }
         }
 

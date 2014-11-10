@@ -1,7 +1,7 @@
 ﻿/// <reference path="constants.ts" />
 /// <reference path="managers/asset.ts" />
 /// <reference path="objects/enemy.ts" />
-/// <reference path="objects/island.ts" />
+/// <reference path="objects/ammo.ts" />
 /// <reference path="objects/desert.ts" />
 /// <reference path="objects/tank.ts" />
 /// <reference path="objects/scoreboard.ts" />
@@ -18,7 +18,7 @@ var game;
 
 var desert;
 var tank;
-var island;
+var ammo;
 var enemies = [];
 var scoreboard;
 
@@ -26,6 +26,7 @@ var collision;
 
 var tryAgain;
 var playButton;
+var instructions;
 
 var currentState;
 var currentStateFunction;

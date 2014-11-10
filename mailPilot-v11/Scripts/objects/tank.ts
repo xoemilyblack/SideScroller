@@ -24,6 +24,7 @@ module objects {
 
         update() {
             this.image.y = this.stage.mouseY;
+            this.image.x = this.stage.mouseX;
         }
         destroy() {
             this.engineSound.stop();
