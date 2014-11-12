@@ -47,7 +47,7 @@ var managers;
                 enemy.reset();
                 stage.addChild(this.animation);
                 stage.update();
-                this.animation.on("animationend", handleAnimationEnd);
+                this.animation.on("animationend", this.handleAnimationEnd);
             }
         };
 
@@ -73,12 +73,11 @@ var managers;
             }
             this.tankAndAmmo();
         };
+        Collision.prototype.handleAnimationEnd = function (event) {
+            stage.removeChild(event.target);
+        };
         return Collision;
     })();
     managers.Collision = Collision;
-
-    function handleAnimationEnd(event) {
-        game.removeChild(this.animation);
-    }
 })(managers || (managers = {}));
 //# sourceMappingURL=collision.js.map

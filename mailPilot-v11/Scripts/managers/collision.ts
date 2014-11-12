@@ -54,11 +54,11 @@ module managers {
                 enemy.reset();
                 stage.addChild(this.animation);
                 stage.update();
-                this.animation.on("animationend", handleAnimationEnd);
-                
+                this.animation.on("animationend", this.handleAnimationEnd);
+
             }
         }
-       
+
         // check collision between tank and ammo
         private tankAndAmmo() {
             var p1: createjs.Point = new createjs.Point();
@@ -81,14 +81,11 @@ module managers {
             }
             this.tankAndAmmo();
         }
+        handleAnimationEnd(event: Event) {
+            stage.removeChild(event.target);
+            
+        }
     }
-  
-         
-         function handleAnimationEnd(event) {
-            game.removeChild(this.animation);
-             
-             
-         
-    }
-    
+
+
 } 
