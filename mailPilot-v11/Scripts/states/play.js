@@ -8,6 +8,7 @@
 /// <reference path="../managers/collision.ts" />
 var states;
 (function (states) {
+    var addLife = false;
     function playState() {
         desert.update();
         ammo.update();
@@ -28,8 +29,9 @@ var states;
             currentState = constants.GAME_OVER_STATE;
             changeState(currentState);
         }
-        if (scoreboard.score == 1500) {
+        if (scoreboard.score == 1500 && !addLife) {
             scoreboard.lives = scoreboard.lives + 1;
+            addLife = true;
         }
     }
     states.playState = playState;

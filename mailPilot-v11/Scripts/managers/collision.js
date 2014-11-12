@@ -40,12 +40,18 @@ var managers;
             p2.y = enemy.image.y;
             if (this.distance(p1, p2) < ((this.tank.height / 2) + (enemy.height / 2))) {
                 createjs.Sound.play("thunder");
+                this.animation = new createjs.Sprite(managers.Assets.atlas, "explosion");
+                this.animation.x = enemy.image.x;
+                this.animation.y = enemy.image.y;
                 this.scoreboard.lives -= 1;
                 enemy.reset();
+                stage.addChild(this.animation);
+                stage.update();
+                this.animation.on("animationend", handleAnimationEnd);
             }
         };
 
-        // check collision between plane and island
+        // check collision between tank and ammo
         Collision.prototype.tankAndAmmo = function () {
             var p1 = new createjs.Point();
             var p2 = new createjs.Point();
@@ -70,5 +76,9 @@ var managers;
         return Collision;
     })();
     managers.Collision = Collision;
+
+    function handleAnimationEnd(event) {
+        game.removeChild(this.animation);
+    }
 })(managers || (managers = {}));
 //# sourceMappingURL=collision.js.map

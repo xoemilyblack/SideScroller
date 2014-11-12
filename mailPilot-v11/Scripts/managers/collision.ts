@@ -11,6 +11,7 @@ module managers {
         private ammo: objects.Ammo;
         private enemies = [];
         private scoreboard: objects.Scoreboard;
+        private animation: createjs.Sprite;
 
         constructor(tank: objects.Tank, ammo: objects.Ammo, enemies, scoreboard: objects.Scoreboard) {
             this.tank = tank;
@@ -46,12 +47,19 @@ module managers {
             p2.y = enemy.image.y;
             if (this.distance(p1, p2) < ((this.tank.height / 2) + (enemy.height / 2))) {
                 createjs.Sound.play("thunder");
+                this.animation = new createjs.Sprite(managers.Assets.atlas, "explosion");
+                this.animation.x = enemy.image.x;
+                this.animation.y = enemy.image.y;
                 this.scoreboard.lives -= 1;
                 enemy.reset();
+                stage.addChild(this.animation);
+                stage.update();
+                this.animation.on("animationend", handleAnimationEnd);
+                
             }
         }
-
-        // check collision between plane and island
+       
+        // check collision between tank and ammo
         private tankAndAmmo() {
             var p1: createjs.Point = new createjs.Point();
             var p2: createjs.Point = new createjs.Point();
@@ -74,4 +82,13 @@ module managers {
             this.tankAndAmmo();
         }
     }
+  
+         
+         function handleAnimationEnd(event) {
+            game.removeChild(this.animation);
+             
+             
+         
+    }
+    
 } 
