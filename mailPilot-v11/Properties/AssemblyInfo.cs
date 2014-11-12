@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("mailPilot_v11")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Tank Wars")]
+[assembly: AssemblyDescription("This is a side scrolling  tank game.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("mailPilot_v11")]
+[assembly: AssemblyCompany("E Black Computers")]
+[assembly: AssemblyProduct("Tank Wars")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -21,7 +21,7 @@ var game: createjs.Container;
 var desert: objects.Desert;
 var tank: objects.Tank;
 var ammo: objects.Ammo;
-var enemies = []; // Clouds array;
+var enemies = []; // Enemy array;
 var scoreboard: objects.Scoreboard;
 
 var collision: managers.Collision;

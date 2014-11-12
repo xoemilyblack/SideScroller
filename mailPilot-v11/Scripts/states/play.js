@@ -9,6 +9,7 @@
 var states;
 (function (states) {
     var addLife = false;
+
     function playState() {
         desert.update();
         ammo.update();

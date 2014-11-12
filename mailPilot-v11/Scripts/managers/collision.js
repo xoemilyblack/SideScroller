@@ -30,7 +30,7 @@ var managers;
             return result;
         };
 
-        // check collision between plane and any cloud object
+        // check collision between tank and any enemy object
         Collision.prototype.tankAndEnemy = function (enemy) {
             var p1 = new createjs.Point();
             var p2 = new createjs.Point();

@@ -37,7 +37,7 @@ module managers {
             return result;
         }
 
-        // check collision between plane and any cloud object
+        // check collision between tank and any enemy object
         private tankAndEnemy(enemy: objects.Enemy) {
             var p1: createjs.Point = new createjs.Point();
             var p2: createjs.Point = new createjs.Point();

@@ -7,7 +7,7 @@
 
     // Game Constants
     constants.ENEMY_NUM = 4;
-    constants.LABEL_FONT = "40px Bold Consolas";
+    constants.LABEL_FONT = "bold 50px Segoe UI";
     constants.LABEL_COLOUR = "#FFFFFF";
     constants.PLANE_LIVES = 3;
 })(constants || (constants = {}));

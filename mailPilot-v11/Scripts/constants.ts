@@ -6,7 +6,10 @@
 
     // Game Constants
     export var ENEMY_NUM: number = 4;
-    export var LABEL_FONT = "40px Bold Consolas";
+    export var LABEL_FONT = "bold 50px Segoe UI";
     export var LABEL_COLOUR = "#FFFFFF";
     export var PLANE_LIVES = 3;
+    
+    
+    
 }

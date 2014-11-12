@@ -8,8 +8,9 @@
         { id: "enemy", src: "assets/images/enemy.fw.png" },
         { id: "ammo", src: "assets/images/ammo.fw.png" },
         { id: "engine", src: "assets/sounds/engine.ogg" },
-        { id: "thunder", src: "assets/sounds/thunder.ogg" },
-        { id: "yay", src: "assets/sounds/yay.ogg" }
+        { id: "thunder", src: "assets/sounds/explosion.mp3" },
+        { id: "yay", src: "assets/sounds/reload.mp3" },
+        { id: "soundtrack", src: "assets/sounds/soundtrack.mp3" }
     ];
 
     // SpriteSheet Data Object
@@ -36,7 +37,7 @@
             "explosion": {
                 frames: [1, 0, 3, 4, 2, 5, 6, 7, 8],
                 next: false,
-                speed: 0.5
+                speed: 1
             }
         }
     };
@@ -47,6 +48,7 @@
         }
         Assets.init = function () {
             createjs.Sound.initializeDefaultPlugins();
+            createjs.Sound.alternateExtensions = ["mp3"];
             this.loader = new createjs.LoadQueue();
             this.loader.installPlugin(createjs.Sound);
             this.loader.loadManifest(assetManifest);

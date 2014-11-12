@@ -8,11 +8,13 @@
 /// <reference path="../managers/collision.ts" />
 module states {
     var addLife: Boolean = false;
+     
     export function playState() {
         desert.update();
         ammo.update();
         tank.update();  
-        
+       
+
 
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
             enemies[count].update();
@@ -33,8 +35,10 @@ module states {
             scoreboard.lives = scoreboard.lives + 1;
             addLife = true;            
         }
-
+       
+     
     }
+   
         // play state Function
         export function play(): void {
             // Declare new Game Container
@@ -61,5 +65,6 @@ module states {
 
             stage.addChild(game);
         }
+ 
     }
     
