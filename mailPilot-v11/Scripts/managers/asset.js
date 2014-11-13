@@ -7,7 +7,7 @@
         { id: "tank", src: "assets/images/tank.fw.png" },
         { id: "enemy", src: "assets/images/enemy.fw.png" },
         { id: "ammo", src: "assets/images/ammo.fw.png" },
-        { id: "engine", src: "assets/sounds/engine.ogg" },
+        { id: "engine", src: "assets/sounds/tank_tracks.mp3" },
         { id: "thunder", src: "assets/sounds/explosion.mp3" },
         { id: "yay", src: "assets/sounds/reload.mp3" },
         { id: "soundtrack", src: "assets/sounds/soundtrack.mp3" }

@@ -18,7 +18,7 @@ module objects {
             this.height = this.image.getBounds().height;
             this.image.regX = this.width / 2;
             this.image.regY = this.height / 2;
-            this.forward = Math.floor((Math.random() * 10) + 5);
+            this.forward = Math.floor((Math.random() * 10) + 6);
             this.reset();
 
             game.addChild(this.image);

@@ -17,12 +17,10 @@ module states {
 
     export function instructionsButtonClicked(event: MouseEvent) {
         var instructionsLabel: objects.Label;
-        
-       
         game.removeAllChildren();
         desert = new objects.Desert(stage, game);
         var message = new createjs.Text('', 'bold 20px Segoe UI', '#ffffff');
-        message.text = "Use the mouse to control your tank up and down."
+        message.text = "Use the mouse to control your tank around the screen."
         + " Dodge the oncoming enemy tanks and pick up ammo to get points."
         + " Reach a score of 1500 points and gain an extra life!";
         message.x = stage.canvas.width / 2;
@@ -37,7 +35,6 @@ module states {
         game.addChild(playButton);
        
         stage.update();
-
     }
 
 

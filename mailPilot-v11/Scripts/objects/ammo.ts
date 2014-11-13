@@ -27,7 +27,7 @@ module objects {
             this.image.x -= this.dx;
             if (this.image.x > this.stage.canvas.width + this.width) {
                 this.reset();
-            } else if (this.image.x == 0) {
+            } else if (this.image.x <= 0) {
                 this.reset();
             }
         }
