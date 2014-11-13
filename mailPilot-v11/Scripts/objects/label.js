@@ -5,6 +5,15 @@
     d.prototype = new __();
 };
 /// <reference path="../constants.ts" />
+/*
+File: label.ts
+Author: Emily Black
+Website: webdesign4.georgianc.on.ca/~200261931/comp2068/SideScroller/index.html
+Description: This is a tank side scroller game.
+Revision: 1
+Last Changed By: Emily Black
+Date Last Modified: November 10, 2014
+*/
 var objects;
 (function (objects) {
     var Label = (function (_super) {

@@ -1,6 +1,15 @@
 ﻿/// <reference path="../managers/asset.ts" />
+/*
+File: tank.ts
+Author: Emily Black
+Website: webdesign4.georgianc.on.ca/~200261931/comp2068/SideScroller/index.html
+Description: This is a tank side scroller game. 
+Revision: 1
+Last Changed By: Emily Black
+Date Last Modified: November 13, 2014
+*/
 module objects {
-    // Plane Class
+    // Tank Class
     export class Tank {
         image: createjs.Bitmap;
         stage: createjs.Stage;

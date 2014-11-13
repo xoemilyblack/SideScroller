@@ -1,4 +1,13 @@
 ﻿/// <reference path="../managers/asset.ts" />
+/*
+File: enemy.ts
+Author: Emily Black
+Website: webdesign4.georgianc.on.ca/~200261931/comp2068/SideScroller/index.html
+Description: This is a tank side scroller game. 
+Revision: 1
+Last Changed By: Emily Black
+Date Last Modified: November 13, 2014
+*/
 module objects {
     // Enemy class
     export class Enemy {

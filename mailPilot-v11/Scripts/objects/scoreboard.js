@@ -1,4 +1,13 @@
-﻿var objects;
+﻿/*
+File: scoreboard.ts
+Author: Emily Black
+Website: webdesign4.georgianc.on.ca/~200261931/comp2068/SideScroller/index.html
+Description: This is a tank side scroller game.
+Revision: 1
+Last Changed By: Emily Black
+Date Last Modified: November 13, 2014
+*/
+var objects;
 (function (objects) {
     // Scoreboard Class
     var Scoreboard = (function () {
@@ -6,7 +15,7 @@
             this.labelText = "";
             this.stage = stage;
             this.game = game;
-            this.lives = constants.PLANE_LIVES;
+            this.lives = constants.TANK_LIVES;
             this.score = 0;
             this.label = new createjs.Text(this.labelText, constants.LABEL_FONT, constants.LABEL_COLOUR);
             this.update();

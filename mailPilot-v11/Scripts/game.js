@@ -11,8 +11,15 @@
 /// <reference path="states/play.ts" />
 /// <reference path="states/menu.ts" />
 /// <reference path="states/gameover.ts" />
-// Mail Pilot Version 11 - Added basic state machine structure - Added Button and Label classes
-// Changed online repo
+/*
+File: game.ts
+Author: Emily Black
+Website: webdesign4.georgianc.on.ca/~200261931/comp2068/SideScroller/index.html
+Description: This is a tank side scroller game.
+Revision: 1
+Last Changed By: Emily Black
+Date Last Modified: November 13, 2014
+*/
 var stage;
 var game;
 

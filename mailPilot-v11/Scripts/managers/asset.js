@@ -1,4 +1,13 @@
-﻿var managers;
+﻿/*
+File: asset.ts
+Author: Emily Black
+Website: webdesign4.georgianc.on.ca/~200261931/comp2068/SideScroller/index.html
+Description: This is a tank side scroller game.
+Revision: 1
+Last Changed By: Emily Black
+Date Last Modified: November 13, 2014
+*/
+var managers;
 (function (managers) {
     // Image and Sound Manifest;
     var assetManifest = [
