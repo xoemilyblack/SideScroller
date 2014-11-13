@@ -73,8 +73,11 @@ var managers;
             }
             this.tankAndAmmo();
         };
-        Collision.prototype.handleAnimationEnd = function (event) {
-            stage.removeChild(event.target);
+        Collision.prototype.handleAnimationEnd = function () {
+            stage.removeChild(this.animation);
+        };
+        Collision.prototype.endCheck = function () {
+            return this.animation;
         };
         return Collision;
     })();

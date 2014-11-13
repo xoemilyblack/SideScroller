@@ -71,7 +71,8 @@ module managers {
                 createjs.Sound.play("yay");
                 this.scoreboard.score += 100;
                 this.ammo.reset();
-            }
+
+            } 
         }
 
         // Utility Function to Check Collisions
@@ -81,9 +82,12 @@ module managers {
             }
             this.tankAndAmmo();
         }
-        handleAnimationEnd(event: Event) {
-            stage.removeChild(event.target);
+        handleAnimationEnd() {
+            stage.removeChild(this.animation);
             
+        }
+        public endCheck(): any {
+            return this.animation;
         }
     }
 

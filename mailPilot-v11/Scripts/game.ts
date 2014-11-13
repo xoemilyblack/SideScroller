@@ -61,6 +61,13 @@ function optimizeForMobile() {
 // Game Loop
 function gameLoop(event): void {
     currentStateFunction();
+    if (collision != null) {
+        if (collision.endCheck() != null) {
+            if (collision.endCheck().currentFrame == 8) {
+                collision.handleAnimationEnd();
+            }
+        }
+    }
     stage.update();
 }
 

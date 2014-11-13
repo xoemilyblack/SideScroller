@@ -47,7 +47,7 @@ module states {
 
     export function menu() {
         var gameNameLabel: objects.Label;
-        createjs.Sound.play("soundtrack");
+        createjs.Sound.play("soundtrack", { loop: 3 });
 
         // Declare new Game Container
         game = new createjs.Container();
