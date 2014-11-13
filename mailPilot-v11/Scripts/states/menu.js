@@ -44,8 +44,9 @@ var states;
     states.menuState = menuState;
 
     function menu() {
-        var gameNameLabel;
         createjs.Sound.play("soundtrack", { loop: 3 });
+
+        var gameNameLabel;
 
         // Declare new Game Container
         game = new createjs.Container();

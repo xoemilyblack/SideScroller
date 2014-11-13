@@ -1,5 +1,6 @@
 ﻿/// <reference path="../objects/enemy.ts" />
 /// <reference path="../objects/ammo.ts" />
+/// <reference path="../managers/asset.ts" />
 /// <reference path="../objects/tank.ts" />
 /// <reference path="../objects/scoreboard.ts" />
 var managers;
@@ -60,7 +61,7 @@ var managers;
             p2.x = this.ammo.image.x;
             p2.y = this.ammo.image.y;
             if (this.distance(p1, p2) < ((this.tank.height / 2) + (this.ammo.height / 2))) {
-                createjs.Sound.play("yay");
+                createjs.Sound.play("ammoPickup");
                 this.scoreboard.score += 100;
                 this.ammo.reset();
             }

@@ -7,6 +7,8 @@
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/label.ts" />
 module states {
+
+
     export function playButtonClicked(event: MouseEvent) {
         stage.removeChild(game);
         game.removeAllChildren();
@@ -36,15 +38,18 @@ module states {
        
         stage.update();
     }
-
-
+  
+    
     export function menuState() {
         desert.update();
+        
     }
 
     export function menu() {
-        var gameNameLabel: objects.Label;
         createjs.Sound.play("soundtrack", { loop: 3 });
+
+        var gameNameLabel: objects.Label;
+
 
         // Declare new Game Container
         game = new createjs.Container();
@@ -68,4 +73,5 @@ module states {
 
         stage.addChild(game);
     }
+   
 } 

@@ -59,8 +59,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\images\ammo.fw.png" />
+    <Content Include="assets\images\atlas.png" />
     <Content Include="assets\images\desert.fw.png" />
-    <Content Include="assets\images\island.png" />
+    <Content Include="assets\images\enemy.fw.png" />
+    <Content Include="assets\images\tank.fw.png" />
     <Content Include="assets\sounds\explosion.mp3" />
     <Content Include="assets\sounds\reload.mp3" />
     <Content Include="assets\sounds\soundtrack.mp3" />
@@ -75,7 +78,6 @@
     <Content Include="assets\sounds\tank_tracks.mp3" />
     <Content Include="css\app.css" />
     <Content Include="css\normalize.css" />
-    <Content Include="assets\images\loading.jpg" />
     <Content Include="index.html" />
     <Content Include="packages.config" />
     <None Include="Scripts\lib\jquery-2.1.1.intellisense.js" />
@@ -90,6 +92,7 @@
     <Content Include="Scripts\lib\jquery-2.1.1.js" />
     <Content Include="Scripts\lib\jquery-2.1.1.min.js" />
     <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\lib\pace.js" />
     <Content Include="Scripts\lib\preloadjs-0.4.1.min.js" />
     <Content Include="Scripts\lib\r.js" />
     <Content Include="Scripts\lib\require.js" />
