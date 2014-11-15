@@ -1,0 +1,37 @@
+{
+"images": ["atlas.png"],
+"frames": [
+
+    [112, 2, 130, 97], 
+    [2, 2, 108, 117], 
+    [364, 2, 114, 97], 
+    [592, 2, 106, 97], 
+    [244, 2, 118, 97], 
+    [480, 2, 110, 97], 
+    [700, 2, 102, 97], 
+    [804, 2, 94, 80], 
+    [900, 2, 82, 72], 
+    [1419, 2, 213, 67], 
+    [984, 2, 216, 68], 
+    [1202, 2, 215, 68]
+],
+"animations": {
+    
+        "exp1 copy":[0], 
+        "exp2":[1], 
+        "exp3":[2], 
+        "exp4":[3], 
+        "exp5":[4], 
+        "exp6":[5], 
+        "exp7":[6], 
+        "exp8":[7], 
+        "exp9":[8], 
+        "instructions.fw":[9], 
+        "play.fw":[10], 
+        "tryagain.fw":[11]
+},
+"texturepacker": [
+        "SmartUpdateHash: $TexturePacker:SmartUpdate:f348f379bc48e31df81b588758d8b7b6:03c59cdc0a21ccfc7ce94f49e71b6707:cbce6b53f0f49e0bf15173c25c41f876$",
+        "Created with TexturePacker (http://www.texturepacker.com) for EaselJS"
+]
+}
